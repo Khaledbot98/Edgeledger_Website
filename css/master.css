@@ -1,0 +1,399 @@
+/* Start Variable */
+:root {
+  --main-text: #93cb52;
+}
+
+/* End Variable */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* background-color: #aaa; */
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Navbar */
+.Navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+/* max-width: 500px */
+@media (max-width: 767px) {
+  .Navbar i {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .Navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.Navbar h1 {
+  font-weight: bold;
+}
+
+.Navbar span {
+  color: var(--main-text);
+  font-weight: 800;
+}
+
+.Navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.Navbar ul li {
+  display: inline-block;
+}
+
+.Navbar ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px;
+  margin: 15px;
+}
+
+.Navbar ul li a:hover {
+  color: white;
+  background-color: var(--main-text);
+  border-radius: 5px;
+}
+
+/* End Navbar */
+
+/* Start Header */
+
+.header {
+  background: #333 url("../img/showcase.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.header .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10px 40px;
+  /* position: absolute; */
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+/* 
+mobile
+@media (min-width: 768px) 
+*/
+
+/* Overlay */
+/* position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0 0 0 / 60%); */
+
+.Navbar i {
+  display: inline-block;
+}
+
+.header .text h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.header .text p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.header .text a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background-color: var(--main-text);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.header .text a:hover {
+  opacity: 0.9;
+}
+
+/* End Header */
+
+/* Start Section What */
+.section-what {
+  display: flex;
+}
+
+.section-what h1 {
+  color: #333;
+  margin-bottom: 60px;
+}
+
+.section-what span {
+  color: var(--main-text);
+  font-weight: bold;
+}
+
+.all-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.section-what .all-content h3 {
+  color: #333;
+}
+
+.section-what .all-content i {
+  background: #93cb52;
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.all-content p {
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .all-content {
+    display: block;
+    /* padding: 1rem; */
+  }
+
+  .all-content p {
+    margin-bottom: 30px;
+  }
+}
+
+/* End Section What */
+
+/* Start Section Who */
+.who {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .who .img {
+    display: none;
+  }
+
+  .who {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+}
+
+.who .img {
+  background: url(../img/people.jpg) no-repeat center center/cover;
+  /*  
+  background-image: url(../img/people.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+  */
+}
+
+.who .text {
+  color: white;
+}
+
+.who .text p:first-of-type {
+  line-height: 1.7;
+}
+
+.who .text h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.who .text .par {
+  margin: 0;
+}
+
+/* .who .text .par p {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #444;
+} */
+
+.who .text .par #hr {
+  margin: 10px 0;
+  border-bottom: 1px solid #333;
+}
+.who .text span {
+  color: var(--main-text);
+  font-weight: bold;
+}
+
+/* End Section Who */
+
+/* Start Our Clients */
+.client {
+  margin: auto;
+  padding: 15px;
+}
+
+.client span {
+  color: var(--main-text);
+  font-weight: bold;
+}
+
+.client .icons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.client .icons img {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+/* End Our Clients */
+
+/* Start Contant */
+.contact {
+  background-color: var(--main-text);
+  padding: 30px;
+  color: white;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact h5 {
+  font-size: 18px;
+}
+
+.contact .area {
+  width: 30%;
+  padding: 10px;
+}
+
+.contact .message {
+  width: 30%;
+  height: 50%;
+}
+
+@media (max-width: 768px) {
+  .contact h5 {
+    font-size: 16px;
+  }
+  .contact .area {
+    width: 60%;
+    padding: 10px;
+  }
+  .contact .message {
+    width: 60%;
+    height: 50%;
+  }
+}
+
+input[type="submit"] {
+  width: 40%;
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #4caf50;
+}
+
+/* End Contant  */
+
+/* Start Footer */
+.footer {
+  /* height: 120px; */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 18px;
+}
+
+.footer span {
+  font-weight: bold;
+  color: var(--main-text);
+}
+
+/* End Footer */
